@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - A Pen by 繆宜庭</title>
+  
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&amp;display=swap'>
+  
+<style>
+@charset "UTF-8";
+* {
+  font-family: "Ubuntu", "微軟正黑體";
+  position: relative;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  scroll: none;
+  overflow: hidden;
+}
+
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm {
+  background-color: #EF513B;
+  transition-duration: 0.5s;
+  height: 40px;
+  border-bottom: solid 2px #EF513B;
+}
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm a {
+  color: #EBEBEB;
+}
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm ul.nav.navbar-nav.ml-auto li {
+  padding-left: 10px;
+}
+
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm.color {
+  background-color: transparent;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm.color a {
+  color: #EF513B;
+  font-weight: blod;
+}
+
+header {
+  position: relative;
+  background-color: #EBEBEB;
+  text-align: center;
+}
+header .logo {
+  width: 80%;
+  max-width: 450px;
+  padding: 180px 0px;
+}
+header .flower {
+  position: absolute;
+  mix-blend-mode: multiply;
+}
+header .flower1 {
+  width: 10%;
+  min-width: 50px;
+  max-width: 80px;
+  bottom: -180px;
+  top: 10%;
+  left: 15%;
+  animation: flower_ani 3s infinite;
+}
+@keyframes flower_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header .flower2 {
+  width: 8%;
+  min-width: 50px;
+  max-width: 80px;
+  top: 75%;
+  left: 10%;
+  animation: flower_ani 2s infinite;
+}
+@keyframes flower_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+header .flower3 {
+  width: 8%;
+  min-width: 50px;
+  max-width: 80px;
+  top: 70%;
+  right: 10%;
+  animation: flower_ani 3s infinite;
+}
+@keyframes flower_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header .flower4 {
+  width: 8%;
+  min-width: 50px;
+  max-width: 80px;
+  top: 20%;
+  right: 35%;
+  animation: flower_ani 4s infinite;
+}
+@keyframes flower_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+header .flower5 {
+  width: 10%;
+  min-width: 50px;
+  max-width: 80px;
+  top: 10%;
+  right: 10%;
+  animation: flower_ani 5s infinite;
+}
+@keyframes flower_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header .explore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 90%;
+  color: #EF513B;
+  font-size: 16px;
+  opacity: 0;
+  transition: 0.5s;
+}
+header .explore:after {
+  content: "v";
+  display: block;
+  transform: scaleY(0.5) scaleX(1.2);
+}
+header .explore.at_top {
+  opacity: 1;
+}
+
+section#section-about {
+  background-color: #EF513B;
+  position: relative;
+}
+section#section-about .follow_icon {
+  width: 80%;
+  position: relative;
+  top: calc(100%-2px);
+  z-index: 10;
+  left: 10%;
+}
+@media (max-width: 475px) {
+  section#section-about .follow_icon {
+    width: 120%;
+    left: -20%;
+  }
+}
+section#section-about .container {
+  transform: rotate(-8deg) scale(0.9);
+}
+section#section-about .container .about_flower1 {
+  position: relative;
+  width: 100px;
+  margin-top: 50px;
+}
+section#section-about .container .col-sm-8 {
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+section#section-about .container .col-sm-8 h1 {
+  font-size: 80px;
+  margin-top: 50px;
+  color: #EBEBEB;
+}
+@media (max-width: 475px) {
+  section#section-about .container .about_flower1 {
+    width: 50px;
+    margin-top: 0px;
+  }
+  section#section-about .container .col-sm-8 h1 {
+    font-size: 50px;
+    margin-top: -30px;
+    margin-left: 40px;
+  }
+}
+section#section-about .container .col-sm-8.offset-4 {
+  font-size: 30px;
+  margin-top: 50px;
+  color: #EBEBEB;
+}
+section#section-about .container .col-sm-8.offset-4 .about_flower2 {
+  position: absolute;
+  width: 100px;
+  top: 0px;
+  right: 10%;
+}
+@media (max-width: 475px) {
+  section#section-about .container .col-sm-8.offset-4 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  section#section-about .container .col-sm-8.offset-4 .about_flower2 {
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 20px;
+    right: -5%;
+  }
+}
+section#section-about .container .col-sm-4 {
+  padding: 0px;
+  margin-bottom: 50px;
+}
+section#section-about .container .col-sm-4 .about_flower3 {
+  position: absolute;
+  width: 100px;
+  top: 0px;
+  right: 10%;
+}
+section#section-about .container .col-sm-4 p {
+  color: #EBEBEB;
+}
+@media (max-width: 475px) {
+  section#section-about .container .col-sm-4 .about_flower3 {
+    width: 40px;
+    margin-left: 50%;
+    opacity: 0;
+  }
+  section#section-about .container .col-sm-8.offset-4.word2 p {
+    font-size: 22px;
+  }
+  section#section-about .container .col-sm-4.offset-4.word3 p {
+    font-size: 20px;
+  }
+  section#section-about .container .col-sm-4.offset-4.word3:after {
+    content: "";
+    display: block;
+    background-image: url(https://i.imgur.com/MgXu58B.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-top: 50px;
+    margin-left: -40px;
+  }
+}
+
+section#section-work {
+  background-color: #EF513B;
+  padding-top: 40px;
+  position: relative;
+}
+@media (max-width: 475px) {
+  section#section-work {
+    padding-top: 20px;
+  }
+}
+section#section-work #cat {
+  width: 350px;
+  position: absolute;
+  right: 200px;
+  z-index: 20;
+  bottom: -20px;
+}
+@media (max-width: 475px) {
+  section#section-work #cat {
+    bottom: -20px;
+    width: 250px;
+  }
+}
+section#section-work .col-sm-12.word {
+  font-size: 30px;
+  color: #EBEBEB;
+}
+section#section-work .follow_icon {
+  transform: translateX(-80px);
+  width: 80%;
+  position: relative;
+  margin: 0px;
+  z-index: 10;
+  left: 10%;
+}
+@media (max-width: 475px) {
+  section#section-work .follow_icon {
+    width: 150%;
+    margin-top: 100px;
+    left: 0%;
+  }
+}
+section#section-work .container .work1 {
+  height: 460px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+section#section-work .container .work1:hover:before {
+  opacity: 1;
+}
+section#section-work .container .work1:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.3s;
+}
+section#section-work .container .work {
+  height: 230px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+section#section-work .container .work:hover:before {
+  opacity: 1;
+}
+section#section-work .container .work:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.3s;
+}
+section#section-work .container .work1 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/Kckd9Xu.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work1:before {
+  content: "繪本封面設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+@media (max-width: 475px) {
+  section#section-work .container .work1 {
+    border: solid 10px #EF513B;
+  }
+}
+section#section-work .container .work.work2 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/sCC1F6L.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work2:before {
+  content: "商品設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work3 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/zXO2FXR.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work3:before {
+  content: "網站設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work4 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/PovL9zg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work4:before {
+  content: "民宿識別設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work5 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/GvM4Hzr.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work5:before {
+  content: "寵物美容識別設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work6 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/UWqrgqw.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work6:before {
+  content: "畢製主題-迴路";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work7 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/3Siq2Iw.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work7:before {
+  content: "unique識別設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work8 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/fwcW2qD.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work8:before {
+  content: "手繪蛋糕包裝";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work9 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/H7IipH8.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work9:before {
+  content: "北極熊桌遊設計";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work10 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/qLWfDk0.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work10:before {
+  content: "鴻海人才招募、尾牙視覺";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+section#section-work .container .work.work11 {
+  border: solid 3px #EF513B;
+  background-image: url("https://i.imgur.com/xAtqUTX.jpg");
+  background-size: cover;
+  background-position: center;
+}
+section#section-work .container .work.work11:before {
+  content: "新一代主視覺";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+@media (max-width: 475px) {
+  section#section-work .col-sm-8 .row .work {
+    border: solid 10px #EF513B;
+  }
+  section#section-work .row .col-sm-4.work {
+    border: solid 10px #EF513B;
+  }
+  section#section-work #about_flowe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+#exampleModa2.modal.fade .modal-header, #exampleModa3.modal.fade .modal-header, #exampleModa4.modal.fade .modal-header, #exampleModa5.modal.fade .modal-header, #exampleModa6.modal.fade .modal-header, #exampleModa7.modal.fade .modal-header, #exampleModa8.modal.fade .modal-header, #exampleModa9.modal.fade .modal-header, #exampleModa10.modal.fade .modal-header, #exampleModa11.modal.fade .modal-header, #exampleModa1.modal.fade .modal-header {
+  background-color: #A2A2A2;
+  color: white;
+}
+#exampleModa2.modal.fade .modal-header button, #exampleModa3.modal.fade .modal-header button, #exampleModa4.modal.fade .modal-header button, #exampleModa5.modal.fade .modal-header button, #exampleModa6.modal.fade .modal-header button, #exampleModa7.modal.fade .modal-header button, #exampleModa8.modal.fade .modal-header button, #exampleModa9.modal.fade .modal-header button, #exampleModa10.modal.fade .modal-header button, #exampleModa11.modal.fade .modal-header button, #exampleModa1.modal.fade .modal-header button {
+  background-color: transparent;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+@media (max-width: 475px) {
+  #exampleModa2.modal.fade .col-sm-12.inside_word, #exampleModa3.modal.fade .col-sm-12.inside_word, #exampleModa4.modal.fade .col-sm-12.inside_word, #exampleModa5.modal.fade .col-sm-12.inside_word, #exampleModa6.modal.fade .col-sm-12.inside_word, #exampleModa7.modal.fade .col-sm-12.inside_word, #exampleModa8.modal.fade .col-sm-12.inside_word, #exampleModa9.modal.fade .col-sm-12.inside_word, #exampleModa10.modal.fade .col-sm-12.inside_word, #exampleModa11.modal.fade .col-sm-12.inside_word, #exampleModa1.modal.fade .col-sm-12.inside_word {
+    font-size: 12px;
+  }
+}
+#exampleModa2.modal.fade img, #exampleModa3.modal.fade img, #exampleModa4.modal.fade img, #exampleModa5.modal.fade img, #exampleModa6.modal.fade img, #exampleModa7.modal.fade img, #exampleModa8.modal.fade img, #exampleModa9.modal.fade img, #exampleModa10.modal.fade img, #exampleModa11.modal.fade img, #exampleModa1.modal.fade img {
+  width: 100%;
+}
+#exampleModa2.modal.fade .inside_word, #exampleModa3.modal.fade .inside_word, #exampleModa4.modal.fade .inside_word, #exampleModa5.modal.fade .inside_word, #exampleModa6.modal.fade .inside_word, #exampleModa7.modal.fade .inside_word, #exampleModa8.modal.fade .inside_word, #exampleModa9.modal.fade .inside_word, #exampleModa10.modal.fade .inside_word, #exampleModa11.modal.fade .inside_word, #exampleModa1.modal.fade .inside_word {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #A2A2A2;
+}
+
+section#section-contect {
+  background-color: #EBEBEB;
+  padding-top: 40px;
+  position: relative;
+  color: #EF513B;
+}
+section#section-contect #Watering {
+  position: absolute;
+  width: 100px;
+}
+section#section-contect .col-sm-12.word {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+section#section-contect .col-sm-6.mail {
+  width: 100%;
+  border: solid 2px #EF513B;
+  padding: 10px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+section#section-contect .col-sm-6.mail:hover {
+  box-shadow: 3px 3px 5px #EF513B;
+}
+section#section-contect .col-sm-6.mail label {
+  font-size: 23px;
+}
+section#section-contect .col-sm-6.mail input, section#section-contect .col-sm-6.mail label, section#section-contect .col-sm-6.mail textarea {
+  width: 100%;
+  display: block;
+}
+section#section-contect .col-sm-6.mail input, section#section-contect .col-sm-6.mail textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border: solid 3px #EF513B;
+}
+section#section-contect .col-sm-6.mail button {
+  background-color: #EF513B;
+  color: #EBEBEB;
+  border: none;
+  margin-top: 10px;
+}
+@media (max-width: 475px) {
+  section#section-contect .col-sm-6.mail {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+section#section-contect .col-sm-12.word5 {
+  font-size: 23px;
+  margin-top: 40px;
+}
+@media (max-width: 475px) {
+  section#section-contect .col-sm-12.word5 {
+    font-size: 18px;
+  }
+}
+section#section-contect .col-sm-7.offset-6.flower {
+  margin-top: -50px;
+}
+section#section-contect .col-sm-7.offset-6.flower .flower {
+  width: 150px;
+  display: inline-block;
+  transition-duration: 0.3s;
+}
+@media (max-width: 475px) {
+  section#section-contect .col-sm-7.offset-6.flower {
+    margin-left: 0px;
+    padding-left: 50px;
+    margin-top: 20px;
+  }
+  section#section-contect .col-sm-7.offset-6.flower .flower {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+section#section-contect .col-sm-12.rock {
+  margin-bottom: -30px;
+  margin-top: -30px;
+}
+section#section-contect .col-sm-12.rock .rock_icon {
+  width: 130%;
+  transform: translateX(-15%);
+}
+@media (max-width: 475px) {
+  section#section-contect .col-sm-12.rock .rock_icon {
+    margin-bottom: -30px;
+  }
+}
+
+footer#footer {
+  position: relative;
+  text-align: center;
+  background-color: #EF513B;
+  width: 100%;
+}
+footer#footer .icon {
+  max-width: 300px;
+  margin-top: 50px;
+  padding: 50px 0px;
+}
+@media (max-width: 475px) {
+  footer#footer .icon {
+    max-width: 200px;
+  }
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <nav class="navbar navbar-default fixed-top navbar-top navbar-expand-sm color">
+  <div class="container">
+    <div class="navbar-header"><a class="navbar-brand">Miao</a></div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav ml-auto">
+        <li><a class="intro" href="#section-about">關於我 INTRO</a></li>
+        <li><a class="about" href="#section-work">作品介紹 WORK</a></li>
+        <li><a class="story" href="#section-contect">聯絡我CONTECT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header id="header_index">
+  <div class="container"><img class="flower flower1" src="https://i.imgur.com/ODh2Uss.png" alt=""/><img class="flower flower2" src="https://i.imgur.com/ODh2Uss.png" alt=""/><img class="logo" src="https://i.imgur.com/9DSUFX6.png" alt=""/><img class="flower flower3" src="https://i.imgur.com/ODh2Uss.png" alt=""/><img class="flower flower4" src="https://i.imgur.com/ODh2Uss.png" alt=""/><img class="flower flower5" src="https://i.imgur.com/ODh2Uss.png" alt=""/>
+    <div class="explore at_top">More</div>
+  </div>
+</header>
+<section id="section-about"><img class="follow_icon" src="https://i.imgur.com/OgOkB3k.jpg" alt=""/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 text-right flo1"><img class="about_flower1" src="https://i.imgur.com/MgXu58B.png" alt=""/></div>
+      <div class="col-sm-8 word1">
+        <h1>I’m Miao</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 offset-4 word2">
+        <p>1995 years girl</p>
+        <p>AI,PS,AE,Web Design</p><img class="about_flower2 flo2" src="https://i.imgur.com/MgXu58B.png" alt=""/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><img class="about_flower3 flo3" src="https://i.imgur.com/MgXu58B.png" alt=""/></div>
+      <div class="col-sm-4 offset-4 word3">
+        <p>Tel: 0919603813</p>
+        <p>Mail: ccc551231@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-work">
+  <div class="modal fade" id="exampleModa1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">book Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12"><img src="https://i.imgur.com/Kckd9Xu.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/yK03CkZ.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/0YsZHQA.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/A7ggouG.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK
+            <!--button.btn.btn-//primary(type='button') Save changes-->
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Product Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN【中元節加價購】  時間：7/17-8/27</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/sCC1F6L.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4"><img src="https://i.imgur.com/7Q1rD89.jpg" alt=""/></div>
+            <div class="col-sm-4"><img src="https://i.imgur.com/Tp0BFjA.jpg" alt=""/></div>
+            <div class="col-sm-4"><img src="https://i.imgur.com/m3obXHJ.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN 商品預購活動  活動日期：2020/10/21 AM11:00起開始預購</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/sacMWuA.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN「限量2021開運金喜福袋」  活動日期：門市現貨1/27凌晨24：00起現貨販售</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/uhBIMHT.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN第二波「哆啦A夢元氣新生活集點」  活動日期:9月9日至10月4日開跑</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/LYpySCP.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN 「角落草莓梅好心願集點送」活動日期:2020/12月/30開始</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/H6tLAZG.jpg" alt=""/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 inside_word">INFO : 7-ELEVEN 「SNOOPY史努比 聯名店」</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/bqlEqbv.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+          <!--button.btn.btn-//primary(type='button') Save changes-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Website Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">室內設計網站規劃</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/zXO2FXR.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/1NMf3tJ.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/cXDid9M.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/W51B8TA.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Homestay Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">民宿企業識別</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/PovL9zg.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/sNIm8QZ.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/o5jTYS8.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/oBbZxhF.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pet grooming Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">寵物美容企業識別</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/X4s49Ha.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/rO7mQf9.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/Br32Fl9.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/GvM4Hzr.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Graduation production Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">迴路-讓五感成為你的提示者</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/ZTLNMlv.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/UWqrgqw.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/OehSNSx.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/TSbXtXa.jpg" alt=""/></div>
+            <div class="col-sm-12 inside_word"><br>網站設計<br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/fH2iS7Y.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/qaEbDQ6.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Unique Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">Unique-品牌大學T</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/3Siq2Iw.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/f599zmq.jpg" alt=""/></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/opB2NUI.png" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/UOs4h0s.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/gkUKXa5.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cake packaging Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">手繪蛋糕包裝</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/fwcW2qD.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/aVTFwpc.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/9a1oSMR.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/mgH9Y3x.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/LcXjZtk.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">board game Design</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">北極熊桌遊設計</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/QvctQeG.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/RxR6JkW.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/IuFoeIB.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/H7IipH8.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Campus talent recruitment</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">校園人才招募</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/qLWfDk0.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/LDJsPIq.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/MrXhklu.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12 inside_word">校園人才招募提案-B</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/3I3aZUd.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12 inside_word">尾牙視覺提案</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/JvQCXO5.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/RA64fOm.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12 inside_word">尾牙視覺提案-B</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/0AyJv8Z.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModa11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Generation Design Exhibition</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">x</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-12 inside_word">新一代設計主視覺設計</div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/zsUFtQW.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/HWdFdXe.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/58WVpC6.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/41zMJl4.jpg" alt=""/></div>
+            <div class="col-sm-12"><br></div>
+            <div class="col-sm-12"><img src="https://i.imgur.com/xAtqUTX.jpg" alt=""/></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 word">WORK</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 work1" data-bs-toggle="modal" data-bs-target="#exampleModa1"></div>
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-sm-6 work work2" data-bs-toggle="modal" data-bs-target="#exampleModa2"></div>
+          <div class="col-sm-6 work work3" data-bs-toggle="modal" data-bs-target="#exampleModa3"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 work work work4" data-bs-toggle="modal" data-bs-target="#exampleModa4"></div>
+          <div class="col-sm-6 work work work work5" data-bs-toggle="modal" data-bs-target="#exampleModa5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 work work work work6" data-bs-toggle="modal" data-bs-target="#exampleModa6"></div>
+      <div class="col-sm-4 work work work work7" data-bs-toggle="modal" data-bs-target="#exampleModa7"></div>
+      <div class="col-sm-4 work work work work8" data-bs-toggle="modal" data-bs-target="#exampleModa8"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 work work work work10" data-bs-toggle="modal" data-bs-target="#exampleModa10"></div>
+      <div class="col-sm-4 work work work work9" data-bs-toggle="modal" data-bs-target="#exampleModa9"></div>
+      <div class="col-sm-4 work work work work11" data-bs-toggle="modal" data-bs-target="#exampleModa11"></div>
+    </div>
+  </div><img id="cat" src="https://i.imgur.com/bQQUQyM.png" alt=""/>
+  <!--img.cat.cat2(src="https://i.imgur.com/7YqWy6Z.png", alt="")-->
+  <!--img.cat.cat3(src="https://i.imgur.com/MfQocQu.png", alt="")--><img class="follow_icon text-right" src="https://i.imgur.com/8XcSHc4.jpg" alt=""/>
+</section>
+<section id="section-contect">
+  <!--img#Watering(src="https://i.imgur.com/2QaRt51.png", alt="")-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 word">Contect </div>
+      <div class="col-sm-6 mail">
+        <h6>Dear Miao</h6>
+        <label>Name</label>
+        <input class="input" type="text"/>
+        <label>Email</label>
+        <input class="input" type="text"/>
+        <label>Contet</label>
+        <textarea class="input" name="" cols="40" rows="5"></textarea>
+        <form class="row g-3">
+          <div class="col-12">
+            <button class="btn btn-primary float-right btn-sm" type="submit">Sign in</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <div class="col-sm-12 word5">
+          <p>If you have any question about me</p>
+          <p>Don`t hestitate to contact me !</p><br/>
+          <p>ccc551231@gmail.com</p>
+          <p>ADDRESS: TAIWAN, TAIPEI , XORO Road</p>
+        </div>
+      </div>
+      <div class="col-sm-7 offset-6 flower"><img class="flower" id="flower_1" src="https://i.imgur.com/vaJYWHM.png" alt=""/><img class="flower" id="flower_2" src="https://i.imgur.com/vaJYWHM.png" alt=""/><img class="flower" id="flower_3" src="https://i.imgur.com/vaJYWHM.png" alt=""/></div>
+      <div class="col-sm-12 rock"><img class="rock_icon" src="https://i.imgur.com/1n7GVrs.png" alt=""/></div>
+    </div>
+  </div>
+</section>
+<footer id="footer"><img class="icon" src="https://i.imgur.com/ITtxikg.jpg" alt=""/></footer>
+  
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js'></script>
+      <script id="rendered-js" type="module">
+import $ from "https://cdn.skypack.dev/jquery@3.6.0";
+
+$(window).scroll(function(evt){ 
+//console.log($(window).scrollTop());
+  if($(window).scrollTop()<=0){
+    $(".explore").addClass('at_top');
+  }
+  else{$('.explore').removeClass('at_top');}
+})
+
+
+$(window).scroll(function(evt){
+if($(window).scrollTop()>0)
+{$('.navbar').removeClass('color'); 
+}
+else {$('.navbar').addClass('color');} })
+
+$(window).mousemove(function(evt){
+  var pagex= evt.pageX;
+  var pagey= evt.pageY;
+  //console.log(pagex,pagey);
+  
+  $('.follow_icon').css("transform","translateX("+(pagex/-20+50)+"px)");
+  
+ 
+  
+  $('.word1').css("transform","translateX("+(pagex/30)+"px)");
+  $('.word2').css("transform","translateX("+(pagex/20)+"px)");
+  $('.word3').css("transform","translateX("+(pagex/10)+"px)");
+  $('.flo1').css("transform","translateX("+(pagey/-10)+"px)");
+  $('.flo2').css("transform","translateX("+(pagey/-20)+"px)");
+  $('.flo3').css("transform","translateX("+(pagey/-30)+"px)");
+ 
+})
+
+
+$('.img1').click(function(){
+  $('.wrap').fadeIn(250);
+event.preventDefault();
+})
+
+$('.closs').click(function(){
+  $('.wrap').fadeOut(250);
+ event.preventDefault();
+})
+
+
+var screenleft=0;
+$('.circle').click(function(){
+  screenleft=screenleft+1;
+  if(screenleft>2){
+    screenleft=0;
+  }
+  $('.img1, .img2, .img3, .img4').css('left','-'+screenleft*100+'%');
+event.preventDefault();
+})
+
+
+
+
+
+
+$(window).mousemove(function(evt){
+  var pagex=evt.pageX;
+  var pagey=evt.pageY;
+  //var x= pagex-$('#section-contect').offset().left;
+  //var y= pagey-$('#section-contect').offset().top;
+  console.log(pagex,pagey);
+  
+  //if(pagey<0 || pagey>$('#section-contect').outerHeight())
+    //$('#Watering').css('opacity','0');
+  //else $('#Watering').css('opacity','1');
+  //$('#Watering').css('left',pagex+'px');
+  //$('#Watering').css('top',pagey+'px');
+  
+ var catplace = $("#cat").offset().left+$('#cat').width()/2;
+  if (pagex<catplace-200) 
+    $('#cat').attr("src","https://i.imgur.com/MfQocQu.png");
+  else if (pagex>catplace+200)
+   $('#cat').attr("src","https://i.imgur.com/bQQUQyM.png");
+  
+   else $('#cat').attr("src","https://i.imgur.com/7YqWy6Z.png");
+  
+  
+  
+  function detect_flower(flower_id,pagex){
+    var flowerplace = $(flower_id).offset().left+$(flower_id).width()/2;
+    if(Math.abs(pagex-flowerplace)<80)
+      $(flower_id).css("bottom","0px");
+    else
+      $(flower_id).css("bottom","-40px");
+  }
+  
+  detect_flower("#flower_1",pagex);
+  detect_flower("#flower_2",pagex);
+  detect_flower("#flower_3",pagex);
+  
+})
+
+
+$(document).on('click','a',function(event){
+  event.preventDefault();
+  var target=$(this).attr('href');
+  $('html,body').animate({
+    scrollTop: $(target).offset().top
+  },500);
+  
+})
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
+
